@@ -55,7 +55,7 @@
 
         /*2.Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 
-        let result=document.getElementById('result');
+        const result=document.getElementById('result').innerHTML;
         let submit= document.querySelector('button');
 
 
@@ -64,18 +64,42 @@
 
         if (randomNumber === userrandomNumber){
             console.log('Ops, something went wrong');
+            document.getElementById('result').append('Ops, something went wrong');
+            document.getElementById('result').style.color='orange';
         }
 
         else if(randomNumber > userrandomNumber){
             console.log('You lost, try again!');
+            document.getElementById('result').append('You lost, try again!');
+            document.getElementById('result').style.color='red';
         }
 
         else if(randomNumber < userrandomNumber){
             console.log('You won!');
+            document.getElementById('result').append('You won!');
+            document.getElementById('result').style.color='green';
         }
 
         }
         )
+
+        /*second exercise*/
+
+        /*1.Chiedi all’utente la sua email*/ 
+
+        const userEmail= prompt ('Insert your email');
+        console.log(userEmail);
+
+        /*4.controlla che sia nella lista di chi può accedere*/
+        const listEmail=['simonacartolina@hotmail.com', 'gino@gmail.it', 'ginetta@gmail.it' ];
+        console.log(listEmail);
+
+        listEmail[i]=true;
+
+        if(listEmail===true){
+            console.log('Logged in');
+        }
+        /*3. stampa un messaggio appropriato sull’esito del controllo.*/
 
 
 
