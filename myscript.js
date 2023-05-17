@@ -64,19 +64,19 @@
 
         if (randomNumber === userrandomNumber){
             console.log('Ops, something went wrong');
-            document.getElementById('result').append('Ops, something went wrong');
+            document.getElementById('result').textContent="Ops, something went wrong";
             document.getElementById('result').style.color='orange';
         }
 
         else if(randomNumber > userrandomNumber){
             console.log('You lost, try again!');
-            document.getElementById('result').append('You lost, try again!');
+            document.getElementById('result').textContent="You lost, try again!";
             document.getElementById('result').style.color='red';
         }
 
         else if(randomNumber < userrandomNumber){
             console.log('You won!');
-            document.getElementById('result').append('You won!');
+            document.getElementById('result').textContent="You won!";
             document.getElementById('result').style.color='green';
         }
 
