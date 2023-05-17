@@ -1,43 +1,4 @@
-
-
-    /*for(
-        let i=1; i<=6; i= i + 1) {
-            const li= document.createElement('li');
-
-            let randomNumber=document.getElementById('randomNumber').value;
-
-            let submit= document.querySelector('button');
-            let result=document.getElementById('result');
-
-            submit.addEventListener('click', function(){
-
-                if(randomNumber=== i) {
-                    result.append('What a luck, you picked up an equal number. Try again!')
-
-                    console.log(i);
-                    console.log(randomNumber);
-                }
-
-                else if(randomNumber> i) {
-                    result.append('You won!')
-
-                    console.log(i);
-                    console.log(randomNumber);
-                }
-    
-                else if(randomNumber< i) {
-                    result.append('You lost, try again!');
-
-                    console.log(i);
-                    console.log(randomNumber);
-                }
-            })
-
-            
-        }*/
-
-
-        /*1.Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.*/
+/*1.Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.*/
 
         let randomNumber;
         randomNumber= Math.floor(Math.random() * 6) + 1;
@@ -94,12 +55,30 @@
         const listEmail=['simonacartolina@hotmail.com', 'gino@gmail.it', 'ginetta@gmail.it' ];
         console.log(listEmail);
 
-        listEmail[i]=true;
+        const ulElement=document.querySelector('ul');
+        const login= document.querySelector ('#Login');
 
-        if(listEmail===true){
-            console.log('Logged in');
+
+        login.addEventListener('click', function(){
+
+        for(i=0; i===listEmail; i++){
+            const liElement=document.createElement('li');
+
+            /*3. stampa un messaggio appropriato sull’esito del controllo.*/
+            if( listEmail[i] === userEmail){
+                console.log('Logged in');
+                document.querySelector ('#Login').textContent="Logged in";
+                ulElement.append(liElement);
+            }
+            else{
+                console.log('Wrong Email');
+                document.querySelector ('#Login').textContent="Wrong Email";
+                ulElement.append(liElement);
+
+            }
         }
-        /*3. stampa un messaggio appropriato sull’esito del controllo.*/
+    }
+        )
 
 
 
